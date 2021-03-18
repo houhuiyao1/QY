@@ -1,0 +1,14 @@
+.button{
+    background-color: #808686;
+    width:50px;
+    font-size:10px;
+    position:relative;
+    top:0px;
+    left:20px;
+
+}
+.text{
+    margin-top:2%;
+    margin-left:2%;
+    width:300px;
+}

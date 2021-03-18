@@ -1,0 +1,56 @@
+view,text,input{
+    padding: 0;
+    margin: 0;
+}
+
+.BOX{
+    width: 100vw;
+    overflow: hidden;
+}
+
+.Search{
+    width: 100%;
+    height: 80rpx;
+    position: relative;
+    margin-top: 20rpx;
+    margin-bottom: 15rpx;
+}
+
+.search{
+    width: 88%;
+    height: 30rpx;
+    margin:  auto;
+    padding: 10rpx;
+    font-size: 30rpx;
+    box-shadow: 0px -2px 3px 1px #DEDEDE,
+                -2px 0px 3px 1px #DEDEDE,
+                2px 0px 3px 1px #DEDEDE,
+                0px 2px 3px 1px #DEDEDE;
+}
+
+.search-icon{
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 10rpx;
+    right: 40rpx;
+}
+
+.add{
+    width: 100rpx;
+    height: 100rpx;
+    position: fixed;
+    z-index: 10000;
+    bottom: 35rpx;
+    right: 25rpx;
+    opacity: 0.5;
+}
+
+.add image{
+    width: 100%;
+    height: 100%;
+}
+
+.yuepailist{
+    margin-bottom:20rpx
+}

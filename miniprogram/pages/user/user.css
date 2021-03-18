@@ -1,0 +1,102 @@
+.geren{
+    position: relative;
+}
+
+.contain{
+    width: 100%;
+    height: 450rpx;
+    position: relative;
+}
+
+.headphoto{
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin:auto;
+    margin-top:40rpx;
+    margin-bottom:30rpx;
+    border: 2rpx black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headphoto image{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+}
+
+.login{
+    width: 200rpx;
+    height: 60rpx;
+    position: absolute;
+    bottom: 120rpx;
+    left: 275rpx;
+}
+
+.login button{
+    border: 1rpx white solid;
+
+}
+
+.login button::after{
+    border: none;
+}
+
+.information{
+    width: 100%;
+    height: 240rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.information .name{
+    font-size: 38rpx;
+    font-weight: 600;
+
+}
+
+.information .school{
+    display: flex;
+    align-items: center;
+    margin: 15rpx 10rpx;
+    font-size: 24rpx;
+    color: rgb(189, 189, 184);
+}
+
+.localicon{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.information .school image{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.information .introduce{
+    font-weight: 500;
+}
+
+.guanzhu{
+    width: 120rpx;
+    height: 60rpx;
+    font-size: 28rpx;
+    position: absolute;
+    right: 40rpx;
+    top: 10rpx;
+    z-index: 1000;
+    border-radius: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color:#ACD598 ;
+}

@@ -1,0 +1,38 @@
+<view class="container">
+    <view class="yuepailist">
+    <!-- 头像 -->
+        <view class="headPhoto" data-userid="{{card.userId}}" catchtap="lookuser">
+            <image src="{{card.user.avatarUrl}}"/>
+        </view>
+
+    <!-- 昵称 -->
+        <view class="information">
+            <view class="name">{{card.user.nickname}}</view>
+        </view>
+
+    <view class="content">
+        {{card.content}}
+    </view>
+
+    <!-- 照片 -->
+        <view class="photo">
+        <block s-for="{{card.photo}}">
+            <image src="{{item}}" catchtap="previewimage" data-imagesrc="{{item}}" mode="aspectFill"></image>
+        </block>
+        </view>
+
+        <view class="school">
+        <view class="local">
+            <image src="../../images/icon/定位.png"></image>
+            <view>{{card.user.location}}</view>
+        </view>
+            <view class="like" s-if="{{!islike[0]}}" bindtap = "like" data-id="{{card.id}}"><image src="/images/icon/点赞1.png"></image></view>
+            <view class="like" s-else bindtap = "like" data-id="{{card.id}}"><image src="/images/icon/点赞2.png"></image></view>
+            <view class="like">
+            <button class="shareicon" bindtap="share" open-type="share" data-blog="{{card}}"></button>
+            <image src="/images/icon/转发.png"></image>
+            </view>
+        </view>
+    </view>
+
+</view>

@@ -1,0 +1,30 @@
+<view class="box">
+    <view class="contain">
+        <textarea placeholder="请输入内容……" class="talkinput" maxlength="150" bindinput="textnumber"/>
+            <view class="images">
+                <block s-for="{{images}}">
+                <view class="imageitem">
+                    <image src="{{item}}"></image>
+                        <view id="remove" bindtap="deleteimage">
+                            <image src="/images/icon/删除.png" data-index="{{index}}"></image>
+                        </view>
+                </view>
+                </block>
+            <image src="/images/icon/add.png" bindtap="chooseimage" s-if="{{add}}"></image>
+        </view>
+
+        <view class="textnum">
+            {{textnum}}/150
+        </view>
+    </view>
+</view>
+<view class="center">
+        <view class="local"><image src="/images/icon/定位.png"></image>{{location}}</view>
+        <view class="h1">选择发布频道：</view>
+        <view class="button">
+            <button class="choose {{check1?'active':''}}" bindtap="binddongtai" >动态</button>
+            <button class="choose {{check2?'active':''}}" bindtap="bindyuepai">约拍</button>
+            <button class="publish" bindtap = "fabu">发 布</button>
+        </view>
+</view>
+

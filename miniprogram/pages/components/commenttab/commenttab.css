@@ -1,0 +1,84 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.yuepailist{
+    width: 90%;
+    border-radius: 10rpx;
+    background-color: #F3F5F2;
+    padding: 20rpx;
+    position: relative;
+    background-color: #FAF8F7;
+}
+
+.headPhoto{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 90rpx;
+    overflow: hidden;
+}
+
+.headPhoto image{
+    width: 100%;
+    height: 100%;
+}
+
+.information{
+    position: absolute;
+    top: 20rpx;
+    left: 140rpx;
+}
+
+.information .name{
+    margin-top: 20rpx;
+    font-weight: 600;
+    font-size: 40rpx;
+}
+
+.local{
+    float: left;
+    white-space:nowrap
+}
+
+.local image{
+    width: 38rpx;
+    height: 38rpx;
+}
+
+.content{
+    width: 90%;
+    margin-left: 90rpx;
+    font-size: 28rpx;
+}
+
+.school{
+    font-size: 26rpx;
+    color: rgb(189, 189, 184);
+}
+
+.school image{
+    width: 34rpx;
+    height: 34rpx;
+    float: left;
+}
+
+.school .like{
+    width: 34rpx;
+    float: right;
+    margin-right: 20rpx;
+}
+
+.photo{
+    width: 90%;
+    height: 200rpx;
+    margin-left: 80rpx;
+}
+
+.photo image{
+    width: 180rpx;
+    height: 180rpx;
+    margin: 10rpx;
+    float: left;
+}

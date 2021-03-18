@@ -1,0 +1,75 @@
+.messageCard{
+    width:750rpx;
+    background: #ffffff;
+}
+.sendImage{
+    position:relative;
+    top:30px;
+    left:30rpx;
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+}
+.sendName{
+    position:relative;
+    font-size: 15px;
+    left:150rpx;
+    top:-5px;
+    color:#352f1c;
+}
+.sendPosition{
+    position:relative;
+    font-size: 10px;
+    top:-5px;
+    left:150rpx;
+    color:#8c8474;
+}
+.sendContent{
+    position:relative;
+    font-size: 13px;
+    left:60rpx;
+}
+.userCard{
+    position: relative;
+    background:-webkit-linear-gradient(90deg,#dbdcde 0%,#9aa0a0 100%);
+    width:650rpx;
+    height:140rpx;
+    left:50rpx;
+}
+.userImage{
+    position:relative;
+    margin:1%;
+    width:130rpx;
+    height:130rpx;
+    left:30rpx;
+    border-radius: 5%;
+}
+.userName{
+    position:relative;
+    font-size:15px;
+    color:white;
+    top:-55px;
+    left:180rpx;
+}
+.userContent{
+    position:relative;
+    top:-55px;
+    left:200rpx;
+    font-size:10px;
+}
+.reply{
+    position:relative;
+    left:120px;
+    top:-3px;
+    background-color: #808686;
+    margin-top:3%;
+    width:50px;
+    height:20px;
+    font-size:10px;
+    color:#ffffff;
+}
+.text{
+    border-radius: 3%;
+    position:relative;
+    left:25px;
+}

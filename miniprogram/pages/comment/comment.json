@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "commenttab":"/components/commenttab/commenttab"
+    },
+    "navigationBarTitleText": "评论"
+}

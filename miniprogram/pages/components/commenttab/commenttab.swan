@@ -1,0 +1,35 @@
+<view class="container">
+    <view class="yuepailist">
+    <!-- 头像 -->
+        <view class="headPhoto">
+            <image src="{{card.user.avatarUrl}}"/>
+        </view>
+
+    <!-- 昵称 -->
+        <view class="information">
+            <view class="name">{{card.user.nickname}}</view>
+        </view>
+
+    <view class="content">
+        {{card.content}}
+    </view>
+
+    <!-- 照片 -->
+        <view class="photo">
+        <block s-for="{{card.photo}}">
+            <image src="{{item}}"></image>
+        </block>
+        </view>
+
+        <view class="school">
+        <view class="local">
+            <!-- <image src="/images/icon/定位.png"></image> -->
+            <view>{{card.user.location}}</view>
+        </view>
+            <view class="like"><image src="../../images/love.png"></image></view>
+            <view class="like"><image src="../../images/transmit.png""></image></view>
+        </view>
+    </view>
+</view>
+
+

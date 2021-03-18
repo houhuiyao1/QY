@@ -1,0 +1,43 @@
+<view class="contain">
+    <commenttab
+    card="{{card}}"
+    islike="{{islike}}"
+    bindshare="share"
+    bindlike="like"
+    bindlookuser="lookuser"
+    ></commenttab>
+</view>
+
+<view class="center"></view>
+
+<view class="answer" >
+    <input placeholder="请输入……"
+    bindinput="inputanswer"
+    value='{{inputanswer}}'
+    bindconfirm = "answer"
+    confirm-type="send"
+    />
+    <button class="button" bindtap="answer" >发送</button>
+</view>
+
+<!-- 评论 -->
+<view class="comments">
+<view class="commentlist" s-for="answer">
+    <view class="yuepailist">
+
+    <view class="headname" >
+    <!-- 头像 -->
+        <view class="headPhoto">
+            <image src="{{item.user.avatarUrl}}"/>
+        </view>
+
+    <!-- 昵称 -->
+        <view class="name">{{item.user.nickname}}</view>
+    </view>
+
+        <view class="comment">
+            {{item.content}}
+        </view>
+</view>
+</view>
+

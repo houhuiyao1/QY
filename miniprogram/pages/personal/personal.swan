@@ -1,0 +1,58 @@
+<view class="geren">
+<!-- 顶部 -->
+
+<view class="contain" s-if="UserInfo">
+    <!-- 头像 -->
+    <view class="headphoto">
+        <image src="{{UserInfo.avatarUrl}}"></image>
+    </view>
+    <!-- 昵称 大学 个性签名 -->
+    <view class="information">
+        <view class="name">
+            {{UserInfo.nickname}}
+        </view>
+        <view class="school" bindtap = "getschool">
+            <image src="/images/icon/local.png"></image>
+
+             <block>{{location}}</block>
+        </view>
+        <navigator class="introduce" bindtap = "bindintroduce" url="/pages/introduce/introduce" s-if="introduce==null">
+            一句话介绍一下自己吧
+        </navigator>
+        <navigator class="introduce" bindtap = "bindintroduce" url="/pages/introduce/introduce" s-else>
+            {{introduce}}
+        </navigator>
+    </view>
+</view>
+
+<view class="contain" s-else>
+    <!-- 头像 -->
+    <view class="headphoto">
+        <image src="https://b.bdstatic.com/searchbox/image/cmsuploader/20180821/1534857615114422.png"></image>
+    </view>
+    <view class="login">
+        <view class="login_text">立即登录></view>
+        <button
+        bindgetuserinfo="bindgetuserinfo"
+        open-type="getUserInfo"
+        >登录</button>
+    </view>
+</view>
+
+
+
+
+<view>
+    <tablist
+    tablist = "{{tablist}}"
+    yuepai = "{{yuepai}}"
+    dongtai = "{{dongtai}}"
+    guanzhu = "{{guanzhu}}"
+    bindunguanzhu = "unguanzhu"
+    show = "{{show}}"
+    bindlookuser = "lookuser"
+    ></tablist>
+</view>
+</view>
+
+

@@ -1,0 +1,57 @@
+<view class="container">
+    <tabs
+        class="border-bottom"
+        tabs-background-color="#fff"
+        tabs-underline-color="#acac94"
+        tabs-inactive-text-color="#808686"
+        tabs-active-text-color="#000"
+        bindtabchange="tabsThree"
+        active-name="{{activeNameThree}}">
+        <tab-item s-for="tab in tabsThree" name="{{tab.name}}" label="{{tab.label}}" />
+    </tabs>
+    <block s-for="card,index in list" s-if="activeNameThree=='一'">
+        <view class="messageCard">
+            <image src={{card.notifierUser.avatarUrl}} class="sendImage" bind:tap = "toOthers" data-id={{card.notifierUser.id}}></image>
+            <view class="sendName">{{card.notifierUser.nickname}}</view>
+            <view class="sendPosition" s-if={{card.notifierUser.location}}>{{card.notifierUser.location}}</view>
+            <view class="sendPosition" s-else={{card.notifierUser.location}}>...</view>
+            <view class="sendContent">{{card.notifyComment}}</view>
+
+            <view class="userCard" bind:tap="toComment" data-id={{card.id}}>
+                <image src={{userImage}} class="userImage"></image>
+                <view class="userName">{{userName}}</view>
+                <view class="userContent">{{card.beforeComment}}</view>
+            </view>
+            <textarea
+            auto-height
+            maxlength="-1"
+            placeholder="请输入..."
+            bindinput="bindInput"
+            class="text" />
+            <button class="reply" bind:tap="submit" data-id={{card.id}}>回复</button>
+        </view>
+    </block>
+    <block s-for="card,index in list2" s-if="activeNameThree=='二'">
+        <view class="messageCard">
+            <image src={{card.notifierUser.avatarUrl}} class="sendImage"></image>
+            <view class="sendName">{{card.notifierUser.nickname}}</view>
+            <view class="sendPosition" s-if={{card.notifierUser.location}}>{{card.notifierUser.location}}</view>
+            <view class="sendPosition" s-else={{card.notifierUser.location}}>...</view>
+            <view class="sendContent">{{card.notifyComment}}</view>
+
+            <view class="userCard" bind:tap="toComment" data-id={{card.id}}>
+                <image src={{userImage}} class="userImage"></image>
+                <view class="userName">{{userName}}</view>
+                <view class="userContent">{{card.beforeComment}}</view>
+            </view>
+            <textarea
+            auto-height
+            maxlength="-1"
+            placeholder="请输入..."
+            bindinput="bindInput"
+            class="text" />
+            <button class="reply" bind:tap="submit" data-id={{card.id}}>回复</button>
+        </view>
+    </block>
+
+</view>

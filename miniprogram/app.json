@@ -1,0 +1,70 @@
+{
+    "pages": [
+        "pages/yuepai/yuepai",
+        "pages/index/index",
+        "pages/userConsole/userConsole",
+        "pages/storageConsole/storageConsole",
+        "pages/databaseGuide/databaseGuide",
+        "pages/addFunction/addFunction",
+        "pages/deployFunctions/deployFunctions",
+        "pages/chooseLib/chooseLib",
+        "pages/snap/snap",
+        "pages/message/message",
+        "pages/profile/profile",
+        "pages/componentd/componentd",
+        "pages/post/post",
+        "pages/detail/detail",
+        "pages/smt-image-uploader/smt-image-uploader",
+        "pages/others/others",
+        "pages/personal/personal",
+        "pages/search/search",
+        "pages/fabu/fabu",
+        "pages/comment/comment",
+        "pages/introduce/introduce",
+        "pages/user/user"
+    ],
+    "window": {
+        "backgroundColor": "#FAFBF9",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#acd598",
+        "navigationBarTitleText": "青约",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#3f3b2a",
+        "selectedColor": "#3f3b2a",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text":"主页",
+                "iconPath": "./images/tab/home.png",
+                "selectedIconPath": "./images/tab/home1.png"
+            },
+            {
+                "pagePath": "pages/yuepai/yuepai",
+                "text":"动态",
+                "iconPath": "./images/tab/camera.png",
+                "selectedIconPath": "./images/tab/camera1.png"
+            },
+            {
+                "pagePath": "pages/message/message",
+                "text":"消息",
+                "iconPath": "./images/tab/email.png",
+                "selectedIconPath": "./images/tab/email1.png"
+            },
+            {
+                "pagePath": "pages/personal/personal",
+                "text":"个人中心",
+                "iconPath": "./images/tab/my.png",
+                "selectedIconPath": "./images/tab/my1.png"
+            }
+        ]
+    },
+    "dynamicLib": {
+        "myDynamicLib": {
+            "provider": "smart-sc"
+        }
+    },
+    "sitemapLocation": "sitemap.json"
+}

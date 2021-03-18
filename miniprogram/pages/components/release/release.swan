@@ -1,0 +1,9 @@
+<view class="container">
+    <textarea
+            auto-height
+            maxlength="-1"
+            placeholder="请在此输入内容:"
+            bindinput="bindInput"
+            class="text" />
+    <button class="button">提交</button>
+</view>

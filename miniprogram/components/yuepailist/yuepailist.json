@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {
+        "smt-like": "dynamicLib://myDynamicLib/like"
+    }
+}

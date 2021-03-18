@@ -1,0 +1,43 @@
+<view class="geren">
+<!-- 顶部 -->
+
+<!-- 关注 -->
+<view class="guanzhu" bindtap="guanzhu" s-if="{{isfollow==1}}">
+    已关注
+</view>
+<view class="guanzhu" bindtap="guanzhu" s-else>
+    关注
+</view>
+
+<view class="contain" >
+    <!-- 头像 -->
+    <view class="headphoto">
+        <image src="{{userinfo.avatarUrl}}"></image>
+    </view>
+    <!-- 昵称 大学 个性签名 -->
+    <view class="information">
+        <view class="name">
+            {{userinfo.nickname}}
+        </view>
+        <view class="school" bindtap = "getschool">
+            <image src="/images/icon/local.png"></image>
+
+             <block>{{userinfo.location}}</block>
+        </view>
+
+        <navigator class="introduce" bindtap = "bindintroduce" url="/pages/introduce/introduce" >
+            {{userinfo.bio}}
+        </navigator>
+    </view>
+</view>
+
+<view>
+    <tablist
+    tablist = "{{tablist}}"
+    yuepai = "{{yuepai}}"
+    dongtai = "{{dongtai}}"
+    guanzhu = "{{guanzhu}}"
+    show = "{{show}}"
+    ></tablist>
+</view>
+</view>

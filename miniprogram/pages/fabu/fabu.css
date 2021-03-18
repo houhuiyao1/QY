@@ -1,0 +1,92 @@
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contain{
+    width: 95%;
+    background-color: #F6F6F6;
+    padding: 5rpx;
+    position: relative;
+}
+
+
+.contain .images image{
+    width: 180rpx;
+    height: 180rpx;
+    margin-left: 10rpx;
+}
+
+.imageitem{
+    float: left;
+    position: relative;
+}
+
+#remove image{
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.textnum{
+    position: absolute;
+    right: 10rpx;
+    bottom: 10rpx;
+    color: rgb(173, 172, 172);
+    font-size: 30rpx;
+}
+
+.center{
+    margin-bottom: 300rpx;
+}
+
+.local{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(153, 151, 151);
+    font-size: 30rpx;
+    margin-right: 20rpx;
+    float: right;
+}
+
+.local image{
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.center .h1{
+    font-size: 30rpx;
+    margin-top: 30rpx;
+    margin-bottom: 40rpx;
+    margin-left: 15rpx;
+}
+
+.button .choose{
+    line-height: 60rpx;
+    width: 160rpx;
+    height: 60rpx;
+    font-weight: 550;
+    font-size: 30rpx;
+    margin-left: 20rpx;
+    float: left;
+}
+
+.button .publish{
+    line-height: 60rpx;
+    width: 260rpx;
+    height: 60rpx;
+    font-weight: 550;
+    font-size: 30rpx;
+    margin-right: 20rpx;
+    float: right;
+    word-spacing: 30rpx;
+}
+
+.active{
+    background-color: #9E9797;
+    color: white;
+}

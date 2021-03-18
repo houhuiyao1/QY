@@ -1,0 +1,84 @@
+<view class="contain">
+    <view class="top">
+        <view class="list"
+        bindtap="tablist"
+        s-for="{{tablist}}"
+        data-index="{{index}}"
+        >{{item}}
+        <view class="{{index==Index?'bottom':''}}"></view>
+    </view>
+    </view>
+    <swiper circular
+     current="{{Index}}"
+     class="moveview"
+     bindchange="changelist"
+     >
+        <swiper-item>
+        <scroll-view class="scrollY"  scroll-y>
+            <view class="share" s-for="{{yuepai}}" s-for-index="yuepai">
+                <view class="time">{{item.createTime}}
+                <text class="school">{{item.user.location}}</text>
+                </view>
+
+                <view class="jieshao">{{item.content}}</view>
+                <view class="scrollX">
+                    <scroll-view
+                    class="photolist"
+                    scroll-x
+                    >
+                    <block s-for="{{item.photo}}" s-for-item="image">
+                        <image src="{{image}}" catchtap="previewimage" data-imagesrc="{{image}}" data-index="{{yuepai}}"></image>
+                    </block>
+
+                    </scroll-view>
+                </view>
+            </view>
+
+            </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+            <scroll-view class="scrollY"  scroll-y>
+            <view class="share" s-for="{{dongtai}}" s-for-index="dongtai">
+                <view class="time">{{item.createTime}}
+                <text class="school">{{item.user.location}}</text>
+                </view>
+                <view class="jieshao">{{item.content}}</view>
+                <view class="scrollX">
+                    <scroll-view
+                    class="photolist"
+                    scroll-x
+                    >
+                    <block s-for="{{item.photo}}" s-for-item="image">
+                        <image src="{{image}}" catchtap="previewimage2" data-imagesrc="{{image}}" data-index="{{dongtai}}"></image>
+                    </block>
+
+                    </scroll-view>
+                </view>
+            </view>
+
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+        <scroll-view class="scrollY"  scroll-y>
+            <view class="guanzhu"
+            s-for="{{guanzhu}}"
+            s-for-index="guanzhu"
+            bindtap="lookuser"
+            data-id="{{item.id}}">
+            <view><image src="{{item.avatarUrl}}" class="followhead"></image></view>
+                <view class="Information">
+                    <view class="Name">{{item.nickname}}</view>
+                    <view class="Location">{{item.location}}</view>
+                </view>
+                <view class="Jieshao">{{item.bio}}</view>
+
+                <view class="unguanzhu" catchtap="unguanzhu" data-user="{{item.id}}" s-if="show">
+                    取消关注
+                </view>
+            </view>
+
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

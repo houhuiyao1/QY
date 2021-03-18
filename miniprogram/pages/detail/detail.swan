@@ -1,0 +1,51 @@
+<view class="wrap">
+    <view class="card-area">
+        <view class="swiper-wrap">
+            <swiper
+                class="swiper-custom"
+                autoplay="auto"
+                interval="3000"
+                duration="500"
+                style="height:1200rpx"
+                current="{{swiperCurrent}}"
+                bindchange="swiperChangeCustom">
+                <swiper-item s-for="{{list[index].photo}}">
+                    <image class="swiper-img" mode="scaleToFill" src="{{item}}"></image>
+                </swiper-item>
+            </swiper>
+            <view class="dots">
+                <view s-for="{{list[index].photo}}" class="dot {{index == swiperCurrent ? ' active' : ''}}"></view>
+            </view>
+        </view>
+        <view class="info">
+        <view class="name">{{list[index].user.nickname}}</view>
+        <view class="content">{{list[index].content}}</view>
+        </view>
+        <image src="../../images/follow.png" class="follow" bind:tap="follow"></image>
+</view>
+<!-- <view class="container">
+    <swiper
+        class="swiper"
+        indicator-dots="true"
+        indicator-color="rgba(0,0,0,0.30)"
+        indicator-active-color="#fff"
+        current="0"
+        current-item-id="0"
+        circular="true"
+        previous-margin="0px"
+        next-margin="0px"
+        display-multiple-items="1"
+        bind:change="swiperChange"
+        bind:animationfinish="animationfinish">
+        <swiper-item
+            s-for="item in list.photo"
+            item-id="{{itemId}}">
+            <view>{{item}}</view>
+        </swiper-item>
+    </swiper>
+    <view class="info">
+        <view class="name">{{list[index].user.nickname}}</view>
+        <view class="content">{{list[index].content}}</view>
+    </view>
+    <view class="button">关 注</view>
+</view> -->

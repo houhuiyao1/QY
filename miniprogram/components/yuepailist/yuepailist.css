@@ -1,0 +1,114 @@
+.contain{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+
+.yuepailist{
+    width: 90vw;
+    border-radius: 10rpx;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+.headPhoto{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 90rpx;
+    overflow: hidden;
+    float: left;
+    margin-right: 10rpx;
+    margin-left: 30rpx;
+}
+
+.headPhoto image{
+    width: 100%;
+    height: 100%;
+}
+
+.information{
+    height: 110rpx;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.information .name{
+    font-weight: 600;
+    color: black;
+    font-size: 24rpx;
+}
+
+.information .school{
+    margin-top: 5rpx;
+    font-size: 18rpx;
+    color: #CCCCCC;
+}
+
+.guanzhu{
+    width: 100rpx;
+    height: 50rpx;
+    font-size: 28rpx;
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+    z-index: 1000;
+    border-radius: 10rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color:#ACD598 ;
+}
+
+.content{
+    width: 100%;
+    font-size: 28rpx;
+    margin:10rpx 30rpx
+}
+
+.photo{
+    width: 100%;
+    margin: auto;
+}
+
+.photo image{
+    width: 100%;
+    float: left;
+}
+
+.bottom{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.like{
+    width: 45rpx;
+    height: 45rpx;
+    position: relative;
+}
+
+.like image{
+    width: 45rpx;
+    height: 45rpx;
+}
+.shareicon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40rpx;
+    height: 40rpx;
+    z-index: 2;
+    opacity: 0;
+}
+
+.shareicon::after{
+    border: none;
+}
+.bot{
+    margin-bottom: 30rpx;
+}

@@ -1,0 +1,118 @@
+{
+    "appid": "22850148",
+    "cloudfunctionRoot": "cloudfunctions/",
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+    "compilation-args": {
+        "common": {},
+        "options": [
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/post/post",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 0,
+                "text": "pages/post/post"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/smt-image-uploader/smt-image-uploader",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 1,
+                "text": "pages/smt-image-uploader/smt-image-uploader"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/others/others",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 2,
+                "text": "pages/others/others"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/comment/comment",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 3,
+                "text": "pages/comment/comment"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/user/user",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 4,
+                "text": "pages/user/user"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/personal/personal",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 5,
+                "text": "pages/personal/personal"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/yuepai/yuepai",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 6,
+                "text": "pages/yuepai/yuepai"
+            },
+            {
+                "extra": {
+                    "compileArgs": "--module cmd",
+                    "ext": {},
+                    "index": "pages/search/search",
+                    "query": "",
+                    "scene": {}
+                },
+                "id": 7,
+                "text": "pages/search/search"
+            }
+        ],
+        "selected": -1
+    },
+    "condition": {},
+    "host": "baiduboxapp",
+    "preview": {
+        "packageId": 734894
+    },
+    "projectname": "青约",
+    "publish": {
+        "version": "1.0.5"
+    },
+    "setting": {
+        "urlCheck": false
+    },
+    "smartProgramRoot": "miniprogram/",
+    "swan": {
+        "baiduboxapp": {
+            "swanJsVersion": "3.210.115",
+            "extensionJsVersion": "1.16.2"
+        }
+    }
+}

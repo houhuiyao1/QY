@@ -1,0 +1,39 @@
+<view class="backimg">
+<view class="contain">
+    <view class="search">
+        <input focus="true"
+         bindfocus="focus"
+         confirm-type="search"
+         bindinput="inputcontents"
+         bindconfirm="searchinput"
+         focus="true"
+        />
+        <image src="/images/icon/搜索.png" class="searchIcon" bindtap="searchinput"></image>
+    </view>
+</view>
+
+<view class="listtop">
+    <block  s-for="{{list}}" >
+    <yuepailist bindlike="like"
+    islike="{{islike}}"
+    userid="{{userid}}"
+    list="{{list}}"
+    blog="{{item}}"
+    blogindex="{{index}}"
+    bindgotalk="gotalk"
+    bindshare="share"
+    bindlookuser="lookuser"
+    ></yuepailist>
+</block>
+</view>
+
+
+<view class="bottom">
+    <view class="text">
+        <view class="size">your youth</view>
+        <view class="size">record start,</view>
+        <view class="size">from now and here</view>
+    </view>
+</view>
+
+</view>

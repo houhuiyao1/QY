@@ -1,0 +1,27 @@
+<view class="BOX">
+<navigator class="Search" url="/pages/search/search">
+    <input class="search" placeholder="请输入……"/>
+    <image src="../../images/icon/搜索.png" class="search-icon"></image>
+</navigator>
+
+<view class="add" bindtap="add">
+    <image src="/images/icon/添加.png"></image>
+</view>
+
+
+<block  s-for="{{list}}">
+    <yuepailist bindlike="like"
+    islike="{{islike}}"
+    userid="{{userid}}"
+    list="{{list}}"
+    blog="{{item}}"
+    blogindex="{{index}}"
+    bindgotalk="gotalk"
+    bindshare="share"
+    bindlookuser="lookuser"
+    catchguanzhu="guanzhu"
+    ></yuepailist>
+</block>
+</view>
+
+

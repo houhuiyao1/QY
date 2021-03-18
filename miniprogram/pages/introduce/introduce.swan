@@ -1,0 +1,7 @@
+<view class="box">
+    <view class="contain">
+        <textarea  placeholder="请输入内容……" maxlength = "20" class = "introduce" bindinput="inputintroduce" focus="true"/>
+        <view class="maxlength">{{textlength}}/20</view>
+    </view>
+    <button class="submit" bindtap="submit">确定</button>
+</view>

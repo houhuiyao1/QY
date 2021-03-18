@@ -1,0 +1,113 @@
+<scroll-view class="container" scroll-y="true" scroll-into-view="{=toView=}" scroll-top="{=scrollTop=}" bindscroll="scroll">
+<view class="wrap">
+    <view class="card-area">
+        <view class="top-description border-bottom">
+            <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-box" id="top">
+                <block s-for="item, index in banner_list[0].banner" s-key="index">
+                    <swiper-item>
+                        <image class="slide-image" src="{{item.pic_url}}" />
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+    <tabs
+            class="border-bottom"
+            tabs-background-color="#9aa0a0"
+            tabs-underline-color="#fff"
+            tabs-inactive-text-color="#fff"
+            tabs-active-text-color="#fff"
+            active-name="{{activeNameOne}}"
+            bindtabchange="tabsOne">
+            <tab-item s-for="tab in tabs" name="{{tab.name}}" label="{{tab.label}}" />
+        </tabs>
+        <block s-for="card,index in list" class="card-show" s-if="activeNameOne=='一'">
+            <view class="card1" s-if="index%2==0">
+                <image src={{card.photo[0]}} mode="scallToFill" class="card-image" bind:tap="todetail" data-index={{index}}></image>
+                <image src={{card.user.avatarUrl}} mode="scallToFill"
+                class="card-user"
+                bind:tap="toOthers"
+                data-id={{card.user.id}}></image>
+                <view class="card-text" s-if={{card.content}}>{{card.content}}</view>
+                <view class="space" s-else={{card.content}}>...</view>
+                <view class="card-useName" s-if={{card.user.nickname}}>{{card.user.nickname}}</view>
+                <view class="space" s-else={{card.user.nickname}}>...</view>
+                <view class="card-userPosition" s-if="card.user.location">{{card.user.location}}</view>
+                <view class="space" s-else="card.user.location">...</view>
+                <image src="../../images/comments.png" class="icon1" bind:tap="comment" data-id={{card.id}}></image>
+                <image src="../../images/love2.png" class="icon2"
+                bind:tap="love" data-index= {{index}} data-id={{card.id}} s-if="love[index]"></image>
+                <image src="../../images/love.png" class="icon2"
+                bind:tap="love" data-index= {{index}} data-id={{card.id}} s-else="love[index]"></image>
+                <image src="../../images/transmit.png" class="icon3" bind:tap="openShare" data-id={{card.id}}></image>
+            </view>
+            <!-- <release class="comment"></release> -->
+            <view class="card2" s-if="index%2==1">
+                <image src={{card.photo[0]}} mode="scallToFillx" class="card-image" bind:tap="todetail" data-index={{index}}></image>
+                <image src={{card.user.avatarUrl}} mode="scallToFill"
+                class="card-user"
+                bind:tap="toOthers"
+                data-id={{card.user.id}}></image>
+                <view class="card-text" s-if={{card.content}}>{{card.content}}</view>
+                <view class="space" s-else={{card.content}}>...</view>
+                <view class="card-useName" s-if={{card.user.nickname}}>{{card.user.nickname}}</view>
+                <view class="space" s-else={{card.user.nickname}}>...</view>
+                <view class="card-userPosition" s-if="card.user.location">{{card.user.location}}</view>
+                <view class="space" s-else="card.user.location">...</view>
+                <image src="../../images/comments.png" class="icon1" bind:tap="comment" data-id={{card.id}}></image>
+                <image src="../../images/love2.png" class="icon2"
+                bind:tap="love" data-index= {{index}} data-id={{card.id}} s-if="love[index]"></image>
+                <image src="../../images/love.png" class="icon2"
+                bind:tap="love" data-index= {{index}} data-id={{card.id}} s-else="love[index]"></image>
+                <image src="../../images/transmit.png" class="icon3" bind:tap="openShare" data-id={{card.id}}></image>
+            </view>
+            <!-- <release class="comment"></release> -->
+        </block>
+        <block s-for="card,index in followlist" class="card-show" s-else="activeNameOne=='一'">
+            <view class="card1" s-if="index%2==0">
+                <image src={{card.photo[0]}} mode="scallToFill" class="card-image" bind:tap="todetail" data-index={{index}}></image>
+                <image src={{card.user.avatarUrl}} mode="scallToFill"
+                class="card-user"
+                bind:tap="toOthers"
+                data-id={{card.user.id}}></image>
+                <view class="card-text" s-if={{card.content}}>{{card.content}}</view>
+                <view class="space" s-else={{card.content}}>...</view>
+                <view class="card-useName" s-if={{card.user.nickname}}>{{card.user.nickname}}</view>
+                <view class="space" s-else={{card.user.nickname}}>...</view>
+                <view class="card-userPosition" s-if="card.user.location">{{card.user.location}}</view>
+                <view class="space" s-else="card.user.location">...</view>
+                <image src="../../images/comments.png" class="icon1" bind:tap="comment" data-id={{card.id}}></image>
+                <image src="../../images/love2.png" class="icon2"
+                bind:tap="love2" data-index= {{index}} data-id={{card.id}} s-if="followlove[index]"></image>
+                <image src="../../images/love.png" class="icon2"
+                bind:tap="love2" data-index= {{index}} data-id={{card.id}} s-else="followlove[index]"></image>
+                <image src="../../images/transmit.png" class="icon3" bind:tap="openShare" data-id={{card.id}}></image>
+                <!-- <view class="share">
+                    <button class="shareicon" bindtap="share" open-type="share" data-id="{{blog.id}}" data-blog="{{blog}}"></button>
+                    <image src="/images/icon/转发.png"></image>
+                </view> -->
+            </view>
+            <!-- <release class="comment"></release> -->
+            <view class="card2" s-if="index%2==1">
+                <image src={{card.photo[0]}} mode="scallToFillx" class="card-image" bind:tap="todetail" data-index={{index}}></image>
+                <image src={{card.user.avatarUrl}} mode="scallToFill"
+                class="card-user"
+                bind:tap="toOthers"
+                data-id={{card.user.id}}></image>
+                <view class="card-text" s-if={{card.content}}>{{card.content}}</view>
+                <view class="space" s-else={{card.content}}>...</view>
+                <view class="card-useName" s-if={{card.user.nickname}}>{{card.user.nickname}}</view>
+                <view class="space" s-else={{card.user.nickname}}>...</view>
+                <view class="card-userPosition" s-if="card.user.location">{{card.user.location}}</view>
+                <view class="space" s-else="card.user.location">...</view>
+                <image src="../../images/comments.png" class="icon1" bind:tap="comment" data-id={{card.id}}></image>
+                <image src="../../images/love2.png" class="icon2"
+                bind:tap="love2" data-index= {{index}} data-id={{card.id}} s-if="followlove[index]"></image>
+                <image src="../../images/love.png" class="icon2"
+                bind:tap="love2" data-index= {{index}} data-id={{card.id}} s-else="followlove[index]"></image>
+                <image src="../../images/transmit.png" class="icon3" bind:tap="openShare" data-id={{card.id}}></image>
+            </view>
+            <!-- <release class="comment"></release> -->
+        </block>
+    <image src="/images/icon/添加.png" class="buttonimage" bind:tap="toRelease"></image>
+</view>

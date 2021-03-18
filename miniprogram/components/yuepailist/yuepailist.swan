@@ -1,0 +1,68 @@
+<view class="bot">
+<navigator
+    class="contain"
+    catchtap="gotalk"
+    data-id="{{blog.id}}"
+    data-islike="{{blog.islike}}"
+    >
+    <view class="yuepailist">
+    <!-- 头像 -->
+        <view class="headPhoto" data-userid="{{blog.userId}}" data-guanzhu="{{blog.isfollow}}" catchtap="lookuser">
+            <image src="{{blog.user.avatarUrl}}"/>
+        </view>
+
+    <!-- 昵称 -->
+        <view class="information">
+            <view class="name">{{blog.user.nickname}}</view>
+            <view class="school">{{blog.user.location}} | {{blog.createTime}}</view>
+        </view>
+
+    <!-- 关注 -->
+    <view class="guanzhu" catchtap="guanzhu" data-userid="{{blog.userId}}" s-if="{{blog.isfollow}}">
+        已关注
+    </view>
+    <view class="guanzhu" catchtap="guanzhu" data-userid="{{blog.userId}}" s-else>
+        关注
+    </view>
+
+    <!-- 评论 -->
+        <view class="content">
+            {{blog.content}}
+        </view>
+
+    <!-- 照片 -->
+        <swiper class="photo"
+        s-if="{{blog.photo.length}}"
+        indicator-dots="true"
+        indicator-active-color="white">
+            <swiper-item s-for="{{blog.photo}}">
+                <image src="{{item}}"
+                catchtap="previewimage"
+                data-imagesrc="{{item}}"
+                mode="aspectFill"></image>
+            </swiper-item>
+        </swiper>
+
+
+        <!-- 点赞分享等 -->
+    <view class="bottom">
+        <view class="like">
+            <button class="shareicon" catchtap="share" open-type="share" data-blog="{{blog}}"></button>
+            <image src="/images/icon/转发.png"></image>
+        </view>
+        <view class="like">
+            <image src="/images/icon/聊天.png"></image>
+        </view>
+        <view class="like" catchtap = "like" data-id="{{blog.id}}" data-index="{{[blogindex]}}" s-if="{{blog.islike}}">
+            <image src="/images/icon/点赞2.png"></image>
+        </view>
+        <view class="like" catchtap = "like" data-id="{{blog.id}}" data-index="{{[blogindex]}}" s-else>
+            <image src="/images/icon/点赞1.png"></image>
+        </view>
+    </view>
+
+    </view>
+
+</navigator>
+
+</view>

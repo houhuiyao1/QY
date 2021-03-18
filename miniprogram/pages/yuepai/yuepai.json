@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "yuepailist":"/components/yuepailist/yuepailist"
+    },
+    "navigationBarTitleText": "动态",
+    "enablePullDownRefresh": true
+
+}

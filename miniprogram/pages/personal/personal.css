@@ -1,0 +1,101 @@
+.contain{
+    width: 100%;
+    height: 450rpx;
+    position: relative;
+}
+
+.headphoto{
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin:auto;
+    margin-top:40rpx;
+    margin-bottom:30rpx;
+    border: 2rpx black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headphoto image{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+}
+
+.introduce{
+    font-size: 30rpx;
+}
+
+.login{
+    width: 220rpx;
+    height: 60rpx;
+    margin:auto;
+    position: relative;
+    margin-top:50rpx;
+}
+
+.login_text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220rpx;
+    height: 60rpx;
+    text-align: center;
+}
+
+.login button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1rpx black solid;
+    width: 200rpx;
+    height: 60rpx;
+    opacity: 0;
+}
+
+.login button::after{
+    border: none;
+}
+
+.information{
+    width: 100%;
+    height: 240rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.information .name{
+    font-size: 38rpx;
+    font-weight: 600;
+
+}
+
+.information .school{
+    display: flex;
+    align-items: center;
+    margin: 15rpx 10rpx;
+    font-size: 24rpx;
+    color: rgb(189, 189, 184);
+}
+
+.localicon{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.information .school image{
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.information .introduce{
+    font-weight: 500;
+}
+
